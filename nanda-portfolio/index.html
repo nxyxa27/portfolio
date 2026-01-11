@@ -1,158 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website designing -K2inofocom</title>
-    <!---external css ---->
-    <link rel="stylesheet" href="style.css">
-    <!---font awesome cdn for font icons---->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>LKPD & Portofolio Digital PJOK - Bulu Tangkis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .signature-pad {
+            border: 2px dashed #cbd5e1;
+            background-color: #f8fafc;
+            touch-action: none;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; padding: 0; }
+            .main-card { box-shadow: none !important; border: none !important; margin: 0; width: 100%; }
+            textarea { border: 1px solid #e2e8f0 !important; background: transparent !important; }
+            .section-break { page-break-inside: avoid; }
+        }
+    </style>
 </head>
-<body>
-   <div class="container">
-       <div class="profile-card"> 
-            <div class="profile-pic">
-                <img src="images/avatar.webp" alt="user avatar">
+<body class="bg-slate-50 min-h-screen">
+
+    <!-- Header Dekoratif (Hanya muncul di Web) -->
+    <div class="bg-indigo-900 h-80 w-full absolute top-0 left-0 z-0 no-print opacity-90" 
+         style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 py-8">
+        <!-- Main Document Card -->
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden main-card border border-slate-200">
+            
+            <!-- Header Dokumen -->
+            <div class="p-8 md:p-12 text-center border-b border-slate-100">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight uppercase">
+                    LEMBAR KERJA PESERTA DIDIK (LKPD) <br>& PORTOFOLIO PJOK
+                </h1>
+                <div class="mt-4 inline-block px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-bold tracking-widest uppercase">
+                    Materi: Bulu Tangkis (Pertemuan 1)
+                </div>
             </div>
 
-            <div class="profile-details">
-                 <div class="intro">
-                    <h4>Muhammad Nanda Septiya Nugraha</h4>
-                    <h5>IT Support</h5>
-                    <div class="social">
-                        <a href="https://facebook.com/muhammad-nanda-septiya-nugraha"><i class="fab fa-facebook" style="color:var(--blue)"></i></a>
-                        <a href="https://instagram.com/nxyxa_27"><i class="fab fa-instagram"  style="color:var(--skyblue)"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"  style="color:var(--dark-pink)"></i></a>
-                        <a href="#"><i class="fab fa-github"  style="color:var(--light-green)"></i></a>
-                        <a href="https://www.linkedin.com/in/muhammad-nanda-septiya-nugraha"><i class="fab fa-linkedin"  style="color:var(--light-blue)"></i></a>
-                    </div>
-                 </div>
-
-                 <div class="contact-info">
-                  <div class="row">
-                      <div class="icon">
-                          <a href="https://wa.me/6285709808532" target="_blank">
-                              <i class="fa fa-phone" style="color:var(--dark-magenta)"></i>
-                          </a>
-                      </div>
-                      <div class="content">
-                          <span>Phone</span>
-                          <h5>+6285709808532</h5>
-                      </div>
-                  </div>
-              
-                    <div class="row">
-                        <div class="icon">
-                           <i class="fa fa-envelope-open"  style="color:var(--light-green)"></i>
+            <div class="p-6 md:p-12 space-y-12">
+                
+                <!-- Identitas Siswa -->
+                <section class="section-break">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
                         </div>
-                        <div class="content">
-                           <span>Email</span>
-                           <h6>muhammadnandasn@gmail.com</h6>
+                        <h2 class="text-xl font-bold text-slate-800">Identitas Siswa</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="space-y-1">
+                            <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest italic">Nama Lengkap</label>
+                            <input type="text" class="w-full border-b-2 border-slate-200 focus:border-indigo-600 outline-none py-2 transition-all bg-transparent" placeholder="Ketik nama Anda...">
                         </div>
-                   </div>
-    
-                   <div class="row">
-                    <div class="icon">
-                       <i class="fa fa-map-marker"  style="color:var(--light-purple)"></i>
+                        <div class="space-y-1">
+                            <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest italic">Kelas</label>
+                            <input type="text" class="w-full border-b-2 border-slate-200 focus:border-indigo-600 outline-none py-2 transition-all bg-transparent" placeholder="Contoh: X-E.1">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest italic">Tanggal</label>
+                            <input type="date" class="w-full border-b-2 border-slate-200 focus:border-indigo-600 outline-none py-2 transition-all bg-transparent">
+                        </div>
                     </div>
-                    <div class="content">
-                       <span>Location</span>
-                       <h5>Bandar Lampung</h5>
+                </section>
+
+                <!-- I. RINGKASAN MATERI -->
+                <section class="section-break">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg font-bold italic">I</div>
+                        <h2 class="text-xl font-bold text-slate-800 uppercase tracking-tight">Ringkasan Materi (Bahan Catatan)</h2>
                     </div>
-                 </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-5 bg-indigo-50 border-l-4 border-indigo-600 rounded-r-2xl">
+                            <h4 class="font-extrabold text-indigo-900 text-sm mb-1 uppercase">Smash</h4>
+                            <p class="text-sm text-slate-600">Pukulan keras dan tajam menukik ke bawah untuk mematikan lawan secepat-cepatnya.</p>
+                        </div>
+                        <div class="p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-2xl">
+                            <h4 class="font-extrabold text-blue-900 text-sm mb-1 uppercase">Lob</h4>
+                            <p class="text-sm text-slate-600">Pukulan mengarahkan shuttlecock melambung tinggi ke arah belakang garis lapangan lawan.</p>
+                        </div>
+                        <div class="p-5 bg-amber-50 border-l-4 border-amber-600 rounded-r-2xl">
+                            <h4 class="font-extrabold text-amber-900 text-sm mb-1 uppercase">Drop Shot</h4>
+                            <p class="text-sm text-slate-600">Pukulan rendah yang mengarahkan shuttlecock jatuh tipis di dekat jaring (net) lawan.</p>
+                        </div>
+                        <div class="p-5 bg-emerald-50 border-l-4 border-emerald-600 rounded-r-2xl">
+                            <h4 class="font-extrabold text-emerald-900 text-sm mb-1 uppercase">Net Play</h4>
+                            <p class="text-sm text-slate-600">Permainan atau pukulan pendek yang dilakukan tepat di depan net secara halus.</p>
+                        </div>
+                    </div>
+                </section>
 
-            </div>
-            <a href="https://drive.usercontent.google.com/u/0/uc?id=1gU3wPkxlrlfbVX18V7pHKZZ20MAdb3Sn&export=download" class="download-btn" target="_blank">
-               <i class="fa fa-download"></i> Download CV
-             </a>
-            </div>
-       </div>
+                <!-- II. PANDUAN AKTIVITAS -->
+                <section class="section-break">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg font-bold italic">II</div>
+                        <h2 class="text-xl font-bold text-slate-800 uppercase tracking-tight">Panduan Aktivitas Praktik (Kartu Tugas)</h2>
+                    </div>
+                    <div class="bg-slate-900 rounded-3xl p-8 text-slate-300 space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-indigo-500 text-white flex-shrink-0 flex items-center justify-center text-xs font-bold">1</div>
+                            <p class="text-sm"><span class="text-white font-bold italic">Latihan Berpasangan:</span> Saling memukul shuttlecock melewati net. Satu pemain melakukan <span class="text-indigo-400 font-bold underline">smash</span>, pemain lawan mengembalikan dengan pukulan <span class="text-indigo-400 font-bold underline">lob</span> secara bergantian.</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-indigo-500 text-white flex-shrink-0 flex items-center justify-center text-xs font-bold">2</div>
+                            <p class="text-sm"><span class="text-white font-bold italic">Kombinasi Poin:</span> Melakukan pukulan smash dan lob bergantian melewati target garis servis. Jika pukulan mengenai sasaran (seperti kerucut atau botol), kelompok mendapat 1 poin.</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-indigo-500 text-white flex-shrink-0 flex items-center justify-center text-xs font-bold">3</div>
+                            <p class="text-sm"><span class="text-white font-bold italic">Permainan Modifikasi:</span> Bermain 3-lawan-3 dengan menerapkan teknik drive, smash, dropshot, dan net play. Sebutkan nama teman sebelum memukul bola ke arahnya untuk melatih komunikasi.</p>
+                        </div>
+                    </div>
+                </section>
 
-       <!----about section ----->
-       <div class="about">
-           <h2>- About Me</h2>
+                <!-- III. TUGAS PORTOFOLIO -->
+                <section class="section-break">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg font-bold italic">III</div>
+                        <h2 class="text-xl font-bold text-slate-800 uppercase tracking-tight">Tugas Portofolio (Refleksi Mandiri)</h2>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold text-slate-700 leading-relaxed">1. Jelaskan langkah-langkah melakukan pukulan dropshot yang benar agar jatuh dekat net lawan!</p>
+                            <textarea class="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-4 text-sm focus:border-indigo-600 outline-none transition-all h-32" placeholder="Ketik jawabanmu di sini..."></textarea>
+                        </div>
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold text-slate-700 leading-relaxed">2. Menurut pengamatanmu, mengapa melakukan smash dari posisi paling belakang lapangan lebih sulit daripada dari posisi tengah?</p>
+                            <textarea class="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-4 text-sm focus:border-indigo-600 outline-none transition-all h-32" placeholder="Ketik jawabanmu di sini..."></textarea>
+                        </div>
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold text-slate-700 leading-relaxed">3. Kesulitan apa yang paling kamu rasakan saat melakukan net play (permainan net)?</p>
+                            <textarea class="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-4 text-sm focus:border-indigo-600 outline-none transition-all h-32" placeholder="Ketik jawabanmu di sini..."></textarea>
+                        </div>
+                    </div>
+                </section>
 
-           <p>Bachelor of Information Systems from <a href="https://www.umitra.ac.id/">Mitra Indonesia University</a>,
-            with 2 years of experience as an IT Technical Support
-            at LPPM Mitra Indonesia University.
-            I possess a strong understanding of various operating systems,
-            software applications, and network infrastructures.
-            </p>
+                <!-- IV. RUBRIK PENILAIAN MANDIRI -->
+                <section class="section-break">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg font-bold italic">IV</div>
+                        <h2 class="text-xl font-bold text-slate-800 uppercase tracking-tight">Rubrik Penilaian Mandiri (Checklist)</h2>
+                    </div>
+                    <div class="overflow-x-auto rounded-2xl border border-slate-100 shadow-sm">
+                        <table class="w-full text-left text-sm">
+                            <thead class="bg-indigo-600 text-white">
+                                <tr>
+                                    <th class="p-4 font-bold">Pernyataan (Kemandirian & Gotong Royong)</th>
+                                    <th class="p-4 text-center w-20 uppercase font-black tracking-tighter">Ya</th>
+                                    <th class="p-4 text-center w-20 uppercase font-black tracking-tighter text-indigo-200">Tidak</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 bg-white">
+                                <tr>
+                                    <td class="p-4 text-slate-700">Saya datang tepat waktu dan memakai seragam olahraga lengkap.</td>
+                                    <td class="p-4 text-center"><input type="radio" name="r1" class="w-4 h-4 accent-indigo-600"></td>
+                                    <td class="p-4 text-center"><input type="radio" name="r1" class="w-4 h-4 accent-slate-300"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 text-slate-700">Saya melakukan pemanasan dengan serius untuk menghindari cedera.</td>
+                                    <td class="p-4 text-center"><input type="radio" name="r2" class="w-4 h-4 accent-indigo-600"></td>
+                                    <td class="p-4 text-center"><input type="radio" name="r2" class="w-4 h-4 accent-slate-300"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 text-slate-700">Saya membantu teman yang kesulitan melakukan teknik pukulan.</td>
+                                    <td class="p-4 text-center"><input type="radio" name="r3" class="w-4 h-4 accent-indigo-600"></td>
+                                    <td class="p-4 text-center"><input type="radio" name="r3" class="w-4 h-4 accent-slate-300"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 text-slate-700">Saya menjaga dan merapikan kembali alat (raket & kok) setelah dipakai.</td>
+                                    <td class="p-4 text-center"><input type="radio" name="r4" class="w-4 h-4 accent-indigo-600"></td>
+                                    <td class="p-4 text-center"><input type="radio" name="r4" class="w-4 h-4 accent-slate-300"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 text-slate-700">Saya menerima kekalahan atau kesalahan dalam permainan dengan sportif.</td>
+                                    <td class="p-4 text-center"><input type="radio" name="r5" class="w-4 h-4 accent-indigo-600"></td>
+                                    <td class="p-4 text-center"><input type="radio" name="r5" class="w-4 h-4 accent-slate-300"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
 
-          <p>
-           I have excellent public speaking skills and the ability to work
-            effectively both independently and as part of a team.
-          </p>
+                <!-- Verifikasi & Tanda Tangan -->
+                <section class="pt-12 border-t-2 border-slate-50 grid grid-cols-1 md:grid-cols-2 gap-12 section-break">
+                    <!-- Sisi Siswa -->
+                    <div class="space-y-4">
+                        <h3 class="text-xs font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Tanda Tangan Siswa</h3>
+                        <canvas id="sig-pad" class="signature-pad w-full h-40 rounded-3xl"></canvas>
+                        <button type="button" onclick="clearSig()" class="no-print text-[10px] font-bold text-red-500 hover:text-red-700 uppercase tracking-widest">Hapus Tanda Tangan</button>
+                    </div>
 
-        <div class="project">
-           <h2>- Project</h2>
-            <div class="work">
-             <div class="workbox">
-                 <div class="icon">
-                    <img src="images/logo-permata.png" alt="">
-                 </div>
-                 <div class="desc">
-                    <h3><a href="https://ukpmpermata.blogspot.com/">News Website of UKMP Permata</a></h3>
-                    <p>I built and managed the website while serving as the editor-in-chief of the Permata Press Student Organization.</p>
-                </div>
-             </div>
-             
-             <div class="workbox">
-                <div class="icon">
-                   <img src="images/lamteng.png" alt="">
-                </div>
-                <div class="desc">
-                   <h3><a href="https://mataramudik.sikamberjaya.id/">Official Website of Mataram Udik Village</a></h3>
-                   <p>The website and database are being built to support my thesis research.</p>
-                </div>
-            </div>
-                </div>
-           
-          <h2>What I Do !!!</h2>
-          <div class="work">
-             <div class="workbox">
-                 <div class="icon">
-                    <img src="images/ui.svg" alt="">
-                 </div>
-                 <div class="desc">
-                   <h3>Network Security</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
-                 </div>
-             </div>
+                    <!-- Sisi Guru -->
+                    <div class="bg-indigo-50 rounded-3xl p-6 flex flex-col justify-between items-center text-center border-2 border-dashed border-indigo-200">
+                        <h3 class="text-xs font-black text-indigo-400 uppercase tracking-[0.2em] mb-4">Verifikasi Guru PJOK</h3>
+                        <div class="w-24 h-24 border-4 border-white shadow-sm rounded-full bg-indigo-100 flex items-center justify-center text-[10px] text-indigo-400 font-bold uppercase p-4 leading-tight">
+                            PARAF<br>GURU
+                        </div>
+                        <p class="text-[10px] text-slate-400 mt-4 italic font-medium">Validasi Berkas Portofolio PJOK v.1.0</p>
+                    </div>
+                </section>
 
-             <div class="workbox">
-                <div class="icon">
-                   <img src="images/app.svg" alt="">
-                </div>
-                <div class="desc">
-                   <h3>Maintenance Systems</h3>
-                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
-                </div>
-            </div>
-     <div class="workbox">
-                <div class="icon">
-                   <img src="images/api.svg" alt="">
-                </div>
-                <div class="desc">
-                   <h3>Troubleshooting and Repair</h3>
-                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
+                <!-- CTA -->
+                <div class="no-print pt-10">
+                    <button onclick="window.print()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-black py-5 rounded-3xl shadow-xl shadow-indigo-200 transition-all flex items-center justify-center space-x-3 transform active:scale-95">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <span class="text-lg tracking-tight">SIMPAN PORTOFOLIO SEBAGAI PDF</span>
+                    </button>
+                    <p class="text-center text-[10px] text-slate-400 mt-6 leading-relaxed italic px-12">Setelah diklik, ubah 'Destination' menjadi 'Save as PDF'. Kirim file tersebut ke WhatsApp Guru untuk penilaian.</p>
                 </div>
             </div>
+        </div>
 
-            <div class="workbox">
-                <div class="icon">
-                   <img src="images/web.svg" alt="">
-                </div>
-                <div class="desc">
-                   <h3>Database Management</h3>
-                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
-                </div>
-            </div>
-            </div>
-            </div>
-       </div>
-   </div>
+        <p class="text-center text-slate-400 text-[10px] mt-12 mb-10 no-print uppercase tracking-[0.3em]">Smart Education System &copy; 2026</p>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('sig-pad');
+        const ctx = canvas.getContext('2d');
+        let writing = false;
+
+        // Responsiveness for signature pad
+        const resizeCanvas = () => {
+            const ratio = Math.max(window.devicePixelRatio || 1, 1);
+            canvas.width = canvas.offsetWidth * ratio;
+            canvas.height = canvas.offsetHeight * ratio;
+            ctx.scale(ratio, ratio);
+        };
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const getPos = (e) => {
+            const rect = canvas.getBoundingClientRect();
+            return {
+                x: (e.clientX || (e.touches ? e.touches[0].clientX : 0)) - rect.left,
+                y: (e.clientY || (e.touches ? e.touches[0].clientY : 0)) - rect.top
+            };
+        };
+
+        const start = (e) => {
+            writing = true;
+            const pos = getPos(e);
+            ctx.beginPath();
+            ctx.moveTo(pos.x, pos.y);
+            e.preventDefault();
+        };
+
+        const draw = (e) => {
+            if (!writing) return;
+            const pos = getPos(e);
+            ctx.lineWidth = 2;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = '#312e81'; // Indigo 900
+            ctx.lineTo(pos.x, pos.y);
+            ctx.stroke();
+            e.preventDefault();
+        };
+
+        const stop = () => writing = false;
+
+        canvas.addEventListener('mousedown', start);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stop);
+        canvas.addEventListener('mouseleave', stop);
+
+        canvas.addEventListener('touchstart', start);
+        canvas.addEventListener('touchmove', draw);
+        canvas.addEventListener('touchend', stop);
+
+        function clearSig() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
 </body>
 </html>
+
